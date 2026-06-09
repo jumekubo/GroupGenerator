@@ -7,12 +7,12 @@
 <link rel="icon" type="image/png" href="favicon.png">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; background: #f2f8f4; color: #1a3324; min-height: 100vh; padding: 2rem; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; background: #f2f5fb; color: #1a2845; min-height: 100vh; padding: 2rem; }
 .app { max-width: 960px; margin: 0 auto; }
-.btn { font-size: 13px; padding: 7px 16px; border-radius: 8px; border: 1px solid #b0ccbc; background: transparent; color: #1a3324; cursor: pointer; font-family: inherit; }
-.btn:hover { background: #e4f0e8; }
-.btn-primary { background: #1a3324; color: #f2f8f4; border-color: #1a3324; font-weight: 500; }
-.btn-primary:hover { background: #2d5040; }
+.btn { font-size: 13px; padding: 7px 16px; border-radius: 8px; border: 1px solid #b0bfd8; background: transparent; color: #1a2845; cursor: pointer; font-family: inherit; }
+.btn:hover { background: #e4ecf8; }
+.btn-primary { background: #1a2845; color: #f2f5fb; border-color: #1a2845; font-weight: 500; }
+.btn-primary:hover { background: #1e3a6e; }
 .btn-sm { padding: 4px 10px; font-size: 12px; }
 .btn-danger { border-color: #c0392b; color: #c0392b; }
 .btn-danger:hover { background: #fde8e8; }
@@ -20,105 +20,105 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-s
 .btn-warn:hover { background: #fff3cd; }
 
 .class-switcher { display: flex; gap: 8px; margin-bottom: 1.5rem; align-items: center; flex-wrap: wrap; }
-.class-btn { font-size: 13px; padding: 7px 18px; border-radius: 20px; border: 1px solid #b0ccbc; background: transparent; color: #4a6a55; cursor: pointer; font-family: inherit; }
-.class-btn.active { background: #1a3324; color: #f2f8f4; border-color: #1a3324; font-weight: 500; }
-.class-btn:hover:not(.active) { background: #e4f0e8; }
-.add-section-btn { font-size: 13px; padding: 7px 14px; border-radius: 20px; border: 1px dashed #b0ccbc; background: transparent; color: #888; cursor: pointer; font-family: inherit; }
-.add-section-btn:hover { background: #e4f0e8; color: #1a3324; }
+.class-btn { font-size: 13px; padding: 7px 18px; border-radius: 20px; border: 1px solid #b0bfd8; background: transparent; color: #3a5280; cursor: pointer; font-family: inherit; }
+.class-btn.active { background: #1a2845; color: #f2f5fb; border-color: #1a2845; font-weight: 500; }
+.class-btn:hover:not(.active) { background: #e4ecf8; }
+.add-section-btn { font-size: 13px; padding: 7px 14px; border-radius: 20px; border: 1px dashed #b0bfd8; background: transparent; color: #888; cursor: pointer; font-family: inherit; }
+.add-section-btn:hover { background: #e4ecf8; color: #1a2845; }
 
 .top-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 12px; }
 .meta { font-size: 13px; color: #666; }
 .action-row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
 
-.tabs { display: flex; gap: 4px; margin-bottom: 1.5rem; border-bottom: 1px solid #c4d9cc; }
+.tabs { display: flex; gap: 4px; margin-bottom: 1.5rem; border-bottom: 1px solid #c0cce4; }
 .tab { font-size: 13px; padding: 6px 14px; border: none; background: none; cursor: pointer; color: #888; font-family: inherit; border-bottom: 2px solid transparent; margin-bottom: -1px; }
-.tab.active { color: #1a3324; border-bottom-color: #3a8c5c; font-weight: 500; }
+.tab.active { color: #1a2845; border-bottom-color: #3a70cc; font-weight: 500; }
 .panel { display: none; }
 .panel.active { display: block; }
 
 /* Absence section */
 .absence-label { font-size: 13px; font-weight: 500; color: #666; margin-bottom: 8px; }
 .absence-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1.5rem; }
-.absence-toggle { font-size: 13px; padding: 6px 14px; border-radius: 20px; border: 1px solid #b0ccbc; background: #fff; color: #1a3324; cursor: pointer; font-family: inherit; }
+.absence-toggle { font-size: 13px; padding: 6px 14px; border-radius: 20px; border: 1px solid #b0bfd8; background: #fff; color: #1a2845; cursor: pointer; font-family: inherit; }
 .absence-toggle.absent { background: #fde8e8; color: #a32d2d; border-color: #f09595; text-decoration: line-through; }
 
 /* Group count controls */
 .group-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 1.5rem; flex-wrap: wrap; }
-.group-controls label { font-size: 13px; font-weight: 500; color: #4a6a55; }
-.group-stepper { display: flex; align-items: center; border: 1px solid #b0ccbc; border-radius: 8px; overflow: hidden; background: #fff; }
-.group-stepper button { width: 32px; height: 32px; border: none; background: #f2f8f4; font-size: 18px; color: #4a6a55; cursor: pointer; font-family: inherit; }
-.group-stepper button:hover { background: #e4f0e8; }
-.group-stepper .count { width: 40px; text-align: center; font-size: 15px; font-weight: 500; color: #1a3324; background: #fff; border-left: 1px solid #c4d9cc; border-right: 1px solid #c4d9cc; line-height: 32px; }
+.group-controls label { font-size: 13px; font-weight: 500; color: #3a5280; }
+.group-stepper { display: flex; align-items: center; border: 1px solid #b0bfd8; border-radius: 8px; overflow: hidden; background: #fff; }
+.group-stepper button { width: 32px; height: 32px; border: none; background: #f2f5fb; font-size: 18px; color: #3a5280; cursor: pointer; font-family: inherit; }
+.group-stepper button:hover { background: #e4ecf8; }
+.group-stepper .count { width: 40px; text-align: center; font-size: 15px; font-weight: 500; color: #1a2845; background: #fff; border-left: 1px solid #c0cce4; border-right: 1px solid #c0cce4; line-height: 32px; }
 .group-meta { font-size: 13px; color: #888; }
 
 /* Board */
 .board { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin-bottom: 1.5rem; }
-.group-card { background: #fff; border: 1px solid #c4d9cc; border-radius: 12px; padding: 1rem 1.25rem; }
+.group-card { background: #fff; border: 1px solid #c0cce4; border-radius: 12px; padding: 1rem 1.25rem; }
 .group-label { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; color: #888; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
 .group-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-.member-chip { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #1a3324; margin-top: 6px; }
+.member-chip { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #1a2845; margin-top: 6px; }
 .avatar { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 500; flex-shrink: 0; }
 .leader-badge { font-size: 10px; font-weight: 600; padding: 1px 7px; border-radius: 20px; background: #fff8e0; color: #8a6000; border: 1px solid #e8c840; margin-left: 4px; letter-spacing: 0.02em; }
 .display-leader-badge { font-size: 11px; font-weight: 600; padding: 2px 9px; border-radius: 20px; background: rgba(255,220,50,0.15); color: #e8c840; border: 1px solid rgba(232,200,64,0.4); margin-left: 6px; }
 
-.round-badge { font-size: 13px; font-weight: 500; padding: 4px 12px; border-radius: 8px; background: #1a3324; color: #f2f8f4; }
-.alert { font-size: 13px; padding: 10px 14px; border-radius: 8px; background: #e4f0e8; color: #4a6a55; border: 1px solid #c4d9cc; }
+.round-badge { font-size: 13px; font-weight: 500; padding: 4px 12px; border-radius: 8px; background: #1a2845; color: #f2f5fb; }
+.alert { font-size: 13px; padding: 10px 14px; border-radius: 8px; background: #e4ecf8; color: #3a5280; border: 1px solid #c0cce4; }
 
 .pill-list { display: flex; flex-wrap: wrap; gap: 6px; }
-.pill { font-size: 12px; padding: 4px 10px; border-radius: 20px; background: #e4f0e8; color: #4a6a55; border: 1px solid #c4d9cc; }
+.pill { font-size: 12px; padding: 4px 10px; border-radius: 20px; background: #e4ecf8; color: #3a5280; border: 1px solid #c0cce4; }
 
 /* History */
 .history-table { width: 100%; font-size: 13px; border-collapse: collapse; }
-.history-table th { text-align: left; font-weight: 500; font-size: 12px; color: #6a8a75; padding: 6px 10px; border-bottom: 1px solid #c4d9cc; }
-.history-table td { padding: 8px 10px; border-bottom: 1px solid #c4d9cc; color: #1a3324; }
+.history-table th { text-align: left; font-weight: 500; font-size: 12px; color: #5a7299; padding: 6px 10px; border-bottom: 1px solid #c0cce4; }
+.history-table td { padding: 8px 10px; border-bottom: 1px solid #c0cce4; color: #1a2845; }
 .history-table tr:last-child td { border-bottom: none; }
-.section-divider { font-size: 13px; font-weight: 500; color: #4a6a55; margin: 1rem 0 8px; }
+.section-divider { font-size: 13px; font-weight: 500; color: #3a5280; margin: 1rem 0 8px; }
 .badge-pair { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 20px; background: #fff3cd; color: #7a5000; border: 1px solid #f0d080; margin: 2px; }
 
 /* Setup */
 .setup-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
 .setup-section label { font-size: 13px; font-weight: 500; color: #666; display: block; margin-bottom: 6px; }
-.setup-section textarea { width: 100%; height: 200px; font-size: 13px; font-family: inherit; border: 1px solid #b0ccbc; border-radius: 8px; padding: 10px 12px; resize: vertical; color: #1a3324; background: #fff; }
-.setup-section textarea:focus { outline: none; border-color: #3a8c5c; }
+.setup-section textarea { width: 100%; height: 200px; font-size: 13px; font-family: inherit; border: 1px solid #b0bfd8; border-radius: 8px; padding: 10px 12px; resize: vertical; color: #1a2845; background: #fff; }
+.setup-section textarea:focus { outline: none; border-color: #3a70cc; }
 .setup-hint { font-size: 12px; color: #888; margin-top: 4px; }
 .rename-row { display: flex; gap: 8px; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; }
-.rename-row input { font-size: 13px; padding: 6px 10px; border-radius: 8px; border: 1px solid #b0ccbc; font-family: inherit; color: #1a3324; background: #fff; width: 220px; }
-.rename-row input:focus { outline: none; border-color: #3a8c5c; }
+.rename-row input { font-size: 13px; padding: 6px 10px; border-radius: 8px; border: 1px solid #b0bfd8; font-family: inherit; color: #1a2845; background: #fff; width: 220px; }
+.rename-row input:focus { outline: none; border-color: #3a70cc; }
 
 /* Modal */
 .modal-bg { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 100; align-items: center; justify-content: center; }
 .modal-bg.open { display: flex; }
-.modal { background: #fff; border-radius: 12px; border: 1px solid #c4d9cc; padding: 1.5rem; width: 340px; max-width: 90vw; box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
-.modal h3 { font-size: 16px; font-weight: 500; margin-bottom: 1rem; color: #1a3324; }
-.modal input { width: 100%; font-size: 13px; padding: 8px 12px; border-radius: 8px; border: 1px solid #b0ccbc; font-family: inherit; color: #1a3324; background: #fff; margin-bottom: 1rem; }
-.modal input:focus { outline: none; border-color: #3a8c5c; }
+.modal { background: #fff; border-radius: 12px; border: 1px solid #c0cce4; padding: 1.5rem; width: 340px; max-width: 90vw; box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
+.modal h3 { font-size: 16px; font-weight: 500; margin-bottom: 1rem; color: #1a2845; }
+.modal input { width: 100%; font-size: 13px; padding: 8px 12px; border-radius: 8px; border: 1px solid #b0bfd8; font-family: inherit; color: #1a2845; background: #fff; margin-bottom: 1rem; }
+.modal input:focus { outline: none; border-color: #3a70cc; }
 .modal-row { display: flex; gap: 8px; justify-content: flex-end; }
 
 /* Display mode */
-.display-overlay { display: none; position: fixed; inset: 0; background: #0d1a12; z-index: 200; padding: 2rem; overflow-y: auto; }
+.display-overlay { display: none; position: fixed; inset: 0; background: #0a1228; z-index: 200; padding: 2rem; overflow-y: auto; }
 .display-overlay.open { display: block; }
 .display-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; flex-wrap: wrap; gap: 12px; }
-.display-title { font-size: 28px; font-weight: 500; color: #e8f5ec; }
-.display-sub { font-size: 16px; color: #6aaa80; margin-top: 4px; }
+.display-title { font-size: 28px; font-weight: 500; color: #e8eef8; }
+.display-sub { font-size: 16px; color: #5a9ad8; margin-top: 4px; }
 .display-board { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
-.display-card { background: #1a3324; border: 1px solid #2d5040; border-radius: 16px; padding: 1.5rem; }
-.display-group-label { font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: #6aaa80; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.display-card { background: #1a2845; border: 1px solid #1e3a6e; border-radius: 16px; padding: 1.5rem; }
+.display-group-label { font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: #5a9ad8; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
 .display-group-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
 .display-member { display: flex; align-items: center; gap: 12px; margin-top: 10px; }
 .display-avatar { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 500; flex-shrink: 0; }
-.display-member-name { font-size: 22px; font-weight: 500; color: #e8f5ec; }
-.display-absent { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #2d5040; }
-.display-absent-label { font-size: 12px; color: #6aaa80; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.06em; }
+.display-member-name { font-size: 22px; font-weight: 500; color: #e8eef8; }
+.display-absent { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #1e3a6e; }
+.display-absent-label { font-size: 12px; color: #5a9ad8; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.06em; }
 .display-absent-names { font-size: 16px; color: #cc5555; }
-.exit-btn { font-size: 13px; padding: 8px 18px; border-radius: 8px; border: 1px solid #2d5040; background: transparent; color: #6aaa80; cursor: pointer; font-family: inherit; }
-.exit-btn:hover { background: #1a3324; color: #e8f5ec; }
+.exit-btn { font-size: 13px; padding: 8px 18px; border-radius: 8px; border: 1px solid #1e3a6e; background: transparent; color: #5a9ad8; cursor: pointer; font-family: inherit; }
+.exit-btn:hover { background: #1a2845; color: #e8eef8; }
 
 /* Shuffle animation */
-.shuffle-overlay { display: none; position: fixed; inset: 0; background: rgba(13,26,18,0.92); z-index: 300; align-items: center; justify-content: center; flex-direction: column; }
+.shuffle-overlay { display: none; position: fixed; inset: 0; background: rgba(10,18,40,0.92); z-index: 300; align-items: center; justify-content: center; flex-direction: column; }
 .shuffle-overlay.open { display: flex; }
-.shuffle-text { font-size: 28px; font-weight: 500; color: #e8f5ec; margin-bottom: 1.5rem; }
+.shuffle-text { font-size: 28px; font-weight: 500; color: #e8eef8; margin-bottom: 1.5rem; }
 .shuffle-cards { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; max-width: 560px; padding: 1rem; }
-.shuffle-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(100,200,130,0.2); border-radius: 10px; padding: 8px 16px; color: #a8dbb8; font-size: 14px; font-weight: 500; animation: cardPulse 0.45s ease infinite alternate; }
+.shuffle-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(90,154,216,0.3); border-radius: 10px; padding: 8px 16px; color: #9ac0e8; font-size: 14px; font-weight: 500; animation: cardPulse 0.45s ease infinite alternate; }
 .shuffle-card:nth-child(odd) { animation-delay: 0.1s; }
 .shuffle-card:nth-child(3n) { animation-delay: 0.22s; }
 @keyframes cardPulse {
@@ -138,7 +138,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-s
 
   <div class="top-bar">
     <div>
-      <div style="font-size:18px;font-weight:500;color:#1a3324;">Group Randomizer</div>
+      <div style="font-size:18px;font-weight:500;color:#1a2845;">Group Randomizer</div>
       <div class="meta" id="meta-line">No groups yet</div>
     </div>
     <div class="action-row">
@@ -188,7 +188,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-s
   <!-- SETUP -->
   <div class="panel" id="panel-setup">
     <div class="rename-row">
-      <label style="font-size:13px;font-weight:500;color:#4a6a55;">Section name</label>
+      <label style="font-size:13px;font-weight:500;color:#3a5280;">Section name</label>
       <input type="text" id="section-name-input" />
       <button class="btn btn-sm" onclick="saveSectionName()">Rename</button>
       <button class="btn btn-sm btn-danger" onclick="deleteSection()">Delete section</button>
@@ -202,11 +202,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-s
     </div>
     <div style="margin-top:1rem;">
       <button class="btn btn-primary" onclick="saveSetup()">Save setup</button>
-      <span id="setup-msg" style="font-size:13px;color:#4a6a55;margin-left:12px;"></span>
+      <span id="setup-msg" style="font-size:13px;color:#3a5280;margin-left:12px;"></span>
     </div>
-    <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid #c4d9cc;">
-      <div style="font-size:13px;font-weight:500;color:#4a6a55;margin-bottom:8px;">Backup &amp; Restore</div>
-      <div style="font-size:12px;color:#6a8a75;margin-bottom:10px;">Download a backup of all sections, rosters, and history. Restore from a backup file if anything is lost.</div>
+    <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid #c0cce4;">
+      <div style="font-size:13px;font-weight:500;color:#3a5280;margin-bottom:8px;">Backup &amp; Restore</div>
+      <div style="font-size:12px;color:#5a7299;margin-bottom:10px;">Download a backup of all sections, rosters, and history. Restore from a backup file if anything is lost.</div>
       <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
         <button class="btn btn-sm" onclick="downloadBackup()">Download backup</button>
         <button class="btn btn-sm" onclick="document.getElementById('restore-file').click()">Restore from file</button>
@@ -242,7 +242,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-s
       <div class="display-sub" id="display-sub"></div>
     </div>
     <div style="display:flex;gap:10px;">
-      <button class="exit-btn" style="background:#2d5040;color:#e8f5ec;border-color:#3a6a50;" onclick="reshuffleFromDisplay()">↺ Reshuffle</button>
+      <button class="exit-btn" style="background:#1e3a6e;color:#e8eef8;border-color:#2a4e88;" onclick="reshuffleFromDisplay()">↺ Reshuffle</button>
       <button class="exit-btn" onclick="closeDisplayMode()">Exit display mode</button>
     </div>
   </div>
@@ -293,7 +293,7 @@ function initials(n) { return n.split(' ').map(p=>p[0]||'').join('').toUpperCase
 /* ── Switcher ── */
 function renderSwitcher() {
   const el = document.getElementById('class-switcher');
-  let h = '<span style="font-size:13px;color:#6a8a75;margin-right:4px;">Section:</span>';
+  let h = '<span style="font-size:13px;color:#5a7299;margin-right:4px;">Section:</span>';
   state.sections.forEach((s,i) => {
     h += `<button class="class-btn${i===state.activeSection?' active':''}" onclick="switchSection(${i})">${esc(s.name)}</button>`;
   });
@@ -334,7 +334,7 @@ function renderAbsenceGrid() {
   const s = sec();
   const grid = document.getElementById('absence-grid');
   if(s.students.length === 0) {
-    grid.innerHTML = '<span style="font-size:13px;color:#6a8a75;">Add students in Setup first.</span>';
+    grid.innerHTML = '<span style="font-size:13px;color:#5a7299;">Add students in Setup first.</span>';
     return;
   }
   grid.innerHTML = s.students.map(n => {
@@ -525,7 +525,7 @@ function undoShuffle() {
 function renderBoard(entry) {
   let html = `<div style="display:flex;align-items:center;gap:12px;margin-bottom:1rem;">
     <span class="round-badge">Round ${entry.round}</span>
-    <span style="font-size:13px;color:#4a6a55;">${entry.date}</span>
+    <span style="font-size:13px;color:#3a5280;">${entry.date}</span>
     ${entry.absent&&entry.absent.length>0?`<span style="font-size:13px;color:#a32d2d;">${entry.absent.length} absent</span>`:''}
   </div>
   <div class="board">`;
@@ -550,7 +550,7 @@ function renderBoard(entry) {
   html += `</div>`;
 
   if(entry.absent && entry.absent.length > 0) {
-    html += `<div style="margin-top:0.5rem;"><div style="font-size:13px;font-weight:500;color:#4a6a55;margin-bottom:6px;">Absent today</div><div class="pill-list">`;
+    html += `<div style="margin-top:0.5rem;"><div style="font-size:13px;font-weight:500;color:#3a5280;margin-bottom:6px;">Absent today</div><div class="pill-list">`;
     entry.absent.forEach(n => { html += `<span class="pill" style="background:#fde8e8;color:#a32d2d;border-color:#f09595;">${esc(n)}</span>`; });
     html += `</div></div>`;
   }
@@ -575,8 +575,8 @@ function renderHistory() {
 
   // Pair frequency summary
   if(topPairs.length > 0) {
-    html += `<div style="background:#fff;border:1px solid #c4d9cc;border-radius:8px;padding:12px 16px;margin-bottom:1rem;">
-      <div style="font-size:12px;font-weight:500;color:#4a6a55;margin-bottom:6px;">Most repeated pairings</div>
+    html += `<div style="background:#fff;border:1px solid #c0cce4;border-radius:8px;padding:12px 16px;margin-bottom:1rem;">
+      <div style="font-size:12px;font-weight:500;color:#3a5280;margin-bottom:6px;">Most repeated pairings</div>
       <div style="display:flex;flex-wrap:wrap;gap:4px;">`;
     topPairs.forEach(([pair, count]) => {
       const [a,b] = pair.split('::');
@@ -600,16 +600,16 @@ function renderHistory() {
     const grouped = studentGroups[n] || 0;
     const leaderCount = leaderCounts[n] || 0;
     const absentCount = s.history.filter(r => r.absent && r.absent.includes(n)).length;
-    html += `<tr><td>${esc(n)}</td><td style="color:#4a6a55;">${grouped}</td><td style="color:#8a6000;">${leaderCount > 0 ? leaderCount : '—'}</td><td style="color:#8aaa95;">${absentCount > 0 ? absentCount : '—'}</td></tr>`;
+    html += `<tr><td>${esc(n)}</td><td style="color:#3a5280;">${grouped}</td><td style="color:#8a6000;">${leaderCount > 0 ? leaderCount : '—'}</td><td style="color:#8aaa95;">${absentCount > 0 ? absentCount : '—'}</td></tr>`;
   });
   html += `</tbody></table>`;
 
   // Round log
   html += `<div class="section-divider">Round log</div>`;
   s.history.forEach(round => {
-    html += `<div style="margin-bottom:10px;padding:10px 14px;border:1px solid #c4d9cc;border-radius:8px;">
+    html += `<div style="margin-bottom:10px;padding:10px 14px;border:1px solid #c0cce4;border-radius:8px;">
       <div style="font-size:13px;font-weight:500;margin-bottom:4px;">Round ${round.round} · ${round.date}${round.absent&&round.absent.length>0?` <span style="font-weight:400;color:#a32d2d;font-size:12px;">(${round.absent.map(esc).join(', ')} absent)</span>`:''}</div>
-      <div style="font-size:12px;color:#4a6a55;">`;
+      <div style="font-size:12px;color:#3a5280;">`;
     round.groups.forEach((g, gi) => {
       const leader = round.leaders ? round.leaders[gi] : null;
       const members = g.map(n => n === leader ? `<strong style="font-weight:600;">★ ${esc(n)}</strong>` : esc(n)).join(', ');
