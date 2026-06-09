@@ -271,16 +271,23 @@ let state = loadAll() || {
   sections: [
     { name:'Creature Studio', students:[], groupCount:3, history:[], roundCount:0 },
     { name:'Game Design Studio', students:[], groupCount:3, history:[], roundCount:0 },
-    { name:'Unplug and Play', students:[], groupCount:3, history:[], roundCount:0 }
+    { name:'Unplug and Play Elective', students:[], groupCount:3, history:[], roundCount:0 }
   ],
   activeSection: 0
 };
 
-// Migration: add "Unplug and Play" to existing installs if not present
-if (!state.sections.some(s => s.name === 'Unplug and Play')) {
-  state.sections.push({ name: 'Unplug and Play', students: [], groupCount: 3, history: [], roundCount: 0 });
+// Migration: rename "Unplug and Play" to "Unplug and Play Elective" on existing installs
+state.sections.forEach(s => {
+  if (s.name === 'Unplug and Play') s.name = 'Unplug and Play Elective';
+});
+
+// Migration: add "Unplug and Play Elective" to existing installs if not present
+if (!state.sections.some(s => s.name === 'Unplug and Play Elective')) {
+  state.sections.push({ name: 'Unplug and Play Elective', students: [], groupCount: 3, history: [], roundCount: 0 });
   saveAll();
 }
+
+saveAll();
 
 let absentToday = new Set();
 let lastShuffle = null;
